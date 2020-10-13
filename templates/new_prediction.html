@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+<!-- here we add our contact forms -->
+{% block content %}
+<div class="contact">
+    <h3>Nouvelle prédiction : </h3>
+    <form action="{{ url_for('get_new_prediction') }}" method=post>
+        <div>
+            <!-- Content of your request -->
+            <p>
+                {{ form.data.label }}<br>
+                {{ form.data(placeholder='Write data dict here ...') }}
+            </p>
+            <!-- Submit button -->
+            <p>
+                {{ form.submit }}
+            </p>
+        </div>
+    </form>
+    <div>
+        <h3>Estimation de la LTV : {{clv_estimation}}</h3>
+    </div>
+</div>
+
+{% endblock %}
