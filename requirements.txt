@@ -3,3 +3,7 @@ flask_bootstrap
 flask_nav
 joblib
 xgboost
+flask_wtf
+pandas
+sklearn
+reverse_geocode
